@@ -1,7 +1,7 @@
 # SEIP Lab Assignments
 
 The main purpose of the current repository, is the submission of the lab
-assignments within the course of Software Engineering in Practice. 
+assignments for the needs of the of Software Engineering in Practice course. 
 Build automation tools, unit testing and design patterns, are some key 
 demonstrative topics that will be covered through the practical assignments.
 
@@ -21,8 +21,19 @@ Being dependant on the JFree java library, the module provides the functionality
 
 Implementing project inherintance, we follow an hierarchical parent - child structure, with:
 
-- seip-lab, being the **parent**, and
-- gradehistogram, being the **module**
+- [seip-lab](https://www.github.com/demetres12/seip-lab), being the **parent**, and
+- [gradehistogram](https://www.github.com/demetres12/seip-lab/gradeshistogram), being the **module**
+
+##### Structure before building
+<h1 align="center">
+	<img height="600"  width="500" src="media/tree-before-build.png" alt="">
+</h1>
+
+##### Structure after building
+
+<h1 align="center">
+	<img height="600"  width="500" src="media/tree-after-build.png" alt="">
+</h1>
 
 
 #### What to do?
@@ -33,13 +44,13 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 git clone https://github.com/demetres12/seip-lab.git
 ```
 
-2. Change directory and move to seip-lab. You can track your working directory, via the pwd command.
+2. Change directory and move to seip-lab. You can track your working directory, via the `pwd` command.
 
 ```bash
 cd seip-lab
 ```
 
-3. Build the project, executing the following commands.
+3. Build the project, executing the following commands, that represent the key default lifecycle phases. Note that executing `mvn package` command, also compiles the project. In case you need to re-build the project, execute the command `mvn clean`, and notice that the target dir will be removed.
 
 ```bash
 mvn compile
@@ -48,10 +59,10 @@ mvn compile
 mvn package
 ```
 
-4. The output is placed under the target dir, containing jar, whic will be executed via the following command.
+4. The build's output is placed under the target dir, containing jar, which will be executed via the following command.
 
 ```java
-java -jar gradeshistogram/target/histogramgenerator-0.0.1-SNAPSHOT-jar-with-dependencies.jar gradeshistogram/src/main/resources/grades.txt
+java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar gradeshistogram/src/main/resources/grades.txt
 ```
 
 
