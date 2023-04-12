@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Parent - main  project's POM information -->
+  	<groupId>gr.aueb.dmst.dimitriskokkotas</groupId>
+  	<artifactId>seip2023_practical_assignments</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>pom</packaging>
+  
+  	<name>SEIP Lab</name>
+  	<description>
+	  SEIP Lab is the parent Maven project, being the root for the lab
+	  assignments submissions.
+  	</description>
+  	  	
+  	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+	<!-- Listing the children - modules of SEIP Lab project -->
+  	<modules>
+  		<module>gradeshistogram</module>
+  	</modules>
+  
+	
+</project>

@@ -59,7 +59,7 @@ mvn compile
 mvn package
 ```
 
-4. The build's output is placed under the target dir, containing jar, which will be executed via the following command.
+4. The build's output is placed under the target dir, containing the fat jar, which will be executed via the following command.
 
 ```java
 java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar gradeshistogram/src/main/resources/grades.txt
