@@ -1,0 +1,60 @@
+# SEIP Lab Assignments
+
+The main purpose of the current repository, is the submission of the lab
+assignments within the course of Software Engineering in Practice. 
+Build automation tools, unit testing and design patterns, are some key 
+demonstrative topics that will be covered through the practical assignments.
+
+## Maven Assignment
+
+Getting started with the Maven build automation tool, we structure a parent-module project.
+Being dependant on the JFree java library, the module provides the functionality stated below:
+
+1. Embedded in HistogramGenerator class, the program reads grades as integers, passed as a txt file command line argument during the runtime.
+2. Passing the stored grades, a method generates the histogram, that being a XYLineChart chart.
+3. The main method needs to call the above method, in order to present the chart.
+
+
+### Getting started with the Maven project
+
+#### Project Structure
+
+Implementing project inherintance, we follow an hierarchical parent - child structure, with:
+
+- seip-lab, being the **parent**, and
+- gradehistogram, being the **module**
+
+
+#### What to do?
+
+1. First you will need to clone the project "seip-lab", so you can obtain the source code locally. We are going to do that through the terminal. For Unix-based os open the utility application "Terminal", while for MS Windows use a Unix-like environment, like CygWin.
+
+```bash
+git clone https://github.com/demetres12/seip-lab.git
+```
+
+2. Change directory and move to seip-lab. You can track your working directory, via the pwd command.
+
+```bash
+cd seip-lab
+```
+
+3. Build the project, executing the following commands.
+
+```bash
+mvn compile
+```
+```bash
+mvn package
+```
+
+4. The output is placed under the target dir, containing jar, whic will be executed via the following command.
+
+```java
+java -jar gradeshistogram/target/histogramgenerator-0.0.1-SNAPSHOT-jar-with-dependencies.jar gradeshistogram/src/main/resources/grades.txt
+```
+
+
+
+
+
