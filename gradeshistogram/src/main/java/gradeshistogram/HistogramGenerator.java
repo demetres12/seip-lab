@@ -120,6 +120,10 @@ public class HistogramGenerator {
 	 */
 	public static void main(String[] args) throws IOException {
 		HistogramGenerator hg = new HistogramGenerator();
+		if(args.length != 1) {
+			System.err.println("Invalid command line argument. Try again!");
+			System.exit(1);
+		}
 		// call readGrades method to receive grades array
 		int[] grades = hg.readGrades(args[0]);
 		// call generateChart method to present the histogram
