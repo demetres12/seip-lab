@@ -24,7 +24,5 @@
 	<!-- Listing the children - modules of SEIP Lab project -->
   	<modules>
   		<module>gradeshistogram</module>
-  	</modules>
-  
-	
+  	</modules> 	
 </project>
