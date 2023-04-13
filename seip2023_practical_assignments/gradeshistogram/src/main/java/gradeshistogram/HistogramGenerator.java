@@ -74,40 +74,55 @@ public class HistogramGenerator {
 		// makes the previously created frame visible
 		frame.setVisible(true);
 	}
+
+	/**
+	 * The readGrades method , accepts a string argument, that being the filename,
+	 * reads and fetches the grades from the txt and uses a delimiter
+	 * to hold them in gradeValues array.
+	 * @param filename String argument that holds the filename
+	 * @exception IOException On file path error
+	 * @return int[] An integer array containing the grades
+	 */
+
+	public int[] readGrades(String filename) {
+		// create an arraylist, in case the length of the grades.txt file is dynamic.
+		ArrayList<Integer> data = new ArrayList<>();
+		// filename is stored in args[0] as that's given via the CLI
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				int num = Integer.parseInt(line);
+				// add each line (i.e. grade) into the arraylist
+				data.add(num);
+			}
+		} catch (IOException e) {
+			System.out.println("File not found.");
+			e.printStackTrace();
+		}
+		// declare the gradeValues array, and set the length equal to arraylist's
+		int[] gradeValues = new int[data.size()];
+		// insert the arraylist's values into array
+		for (int i = 0; i < data.size(); i++) {
+			gradeValues[i] = data.get(i);
+		}
+		return gradeValues;
+	}
 	
 	/**
 	 * The main method , accepts a string argument, that being the grades.txt 
-	 * file, reads and fetches the grades from the txt and uses a delimiter
-	 * to hold them in gradeValues array. Finally, it calls the generateChart
-	 * method, in order to provide functionality to the program.
+	 * file, calls the readGrades method to store the grades in an integer
+	 * array and calls generateChart method, in order to provide functionality
+	 * to the program.
 	 * 
 	 * @param args Single dimension string array, containing the filename (i.e. grades.txt).
 	 * @exception IOException On file path error
 	 * @return Nothing
 	 */
 	public static void main(String[] args) throws IOException {
-		// create an arraylist, in case the length of the grades.txt file is dynamic.
-        ArrayList<Integer> data = new ArrayList<>();
-        // filename is stored in args[0] as that's given via the CLI
-        try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {  
-            String line;
-            while ((line = br.readLine()) != null) {
-                int num = Integer.parseInt(line);
-                // add each line (i.e. grade) into the arraylist
-                data.add(num);
-            }
-        } catch (IOException e) {
-            System.out.println("File not found.");
-            e.printStackTrace();
-        }
-        // declare the gradeValues array, and set the length equal to arraylist's
-        int[] gradeValues = new int[data.size()];
-        // insert the arraylist's values into array
-        for (int i = 0; i < data.size(); i++) {
-            gradeValues[i] = data.get(i);
-        }
 		HistogramGenerator hg = new HistogramGenerator();
+		// call readGrades method to receive grades array
+		int[] grades = hg.readGrades(args[0]);
 		// call generateChart method to present the histogram
-		hg.generateChart(gradeValues);
+		hg.generateChart(grades);
 	}	
 }
