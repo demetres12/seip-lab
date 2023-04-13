@@ -77,16 +77,17 @@ public class HistogramGenerator {
 
 	/**
 	 * The readGrades method , accepts a String value, that being the filename,
-	 * reads and fetches the grades from the txt and uses a delimiter
-	 * to hold them in gradeValues array.
+	 * reads and fetches the grades from the txt, using a delimiter, in order to
+	 * hold them in gradeValues array. Finally the method returns the 
+	 * array's values.
+	 * 
 	 * @param filename String argument that holds the filename
 	 * @exception IOException On file path error
 	 * @return int[] An integer array containing the grades
 	 */
 	public int[] readGrades(String filename) {
-		// create an arraylist, in case the length of the grades.txt file is dynamic.
+		// create an Arraylist, in case the length of the grades.txt file is dynamic
 		ArrayList<Integer> data = new ArrayList<>();
-		// filename is stored in args[0] as that's given via the CLI
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -108,13 +109,13 @@ public class HistogramGenerator {
 	}
 	
 	/**
-	 * The main method , accepts a String value, that being the grades.txt 
-	 * resource, calls the readGrades method to store the grades in an integer
+	 * The main method , accepts a String array, that being the CL arguments, 
+	 * calls the readGrades method to store the grades in an integer
 	 * array and calls generateChart method, in order to provide functionality
-	 * to the program.
+	 * to the program. The filename is stored in args[0] as that's given via the
+	 * CLI.
 	 * 
 	 * @param args Single dimension string array, containing the filename (i.e. grades.txt).
-	 * @exception IOException On file path error
 	 * @return Nothing
 	 */
 	public static void main(String[] args) throws IOException {
