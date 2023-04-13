@@ -4,8 +4,8 @@
 	<img height="171"  width="800" src="media/dmst-aueb.jpeg" alt="">
 </h1>
 
-The main purpose of the current repository, is the submission of the lab
-assignments for the needs of the of Software Engineering in Practice course. 
+The main purpose of the current repository is the submission of the lab
+assignments for the needs of Software Engineering in Practice course. 
 Build automation tools, unit testing and design patterns, are some key 
 demonstrative topics that will be covered through the practical assignments.
 
@@ -81,7 +81,7 @@ mvn package
 ```java
 java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar gradeshistogram/src/main/resources/grades.txt
 ```
-Notice that the `jar-with-dependencies.jar` is the executable.
+Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that we use the `maven-assembly-plugin`, in order to package dependencies into the main .jar output file.
 
 
 
