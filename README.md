@@ -1,7 +1,7 @@
 # SEIP Lab Assignments
 
 <h1 align="center">
-	<img height="171"  width="868" src="media/dmst-logo.jpeg" alt="">
+	<img height="171"  width="800" src="media/dmst-logo.png" alt="">
 </h1>
 
 The main purpose of the current repository, is the submission of the lab
