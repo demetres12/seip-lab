@@ -53,3 +53,7 @@ build/
 
 # vim files
 *.swp
+
+.DS_Store
+
+seip2023_practical_assignments/

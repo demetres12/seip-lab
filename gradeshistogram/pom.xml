@@ -19,7 +19,7 @@
 	
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.jfree/jfreechart 
-			 The dependency refers only to the module
+			 The dependency refers only to the module.
 		-->
 		<dependency>
     		<groupId>org.jfree</groupId>
