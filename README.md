@@ -1,7 +1,7 @@
 # SEIP Lab Assignments
 
 <h1 align="center">
-	<img height="200"  width="795" src="media/dmst.jpeg" alt="">
+	<img height="171"  width="868" src="media/dmst-logo.jpeg" alt="">
 </h1>
 
 The main purpose of the current repository, is the submission of the lab
@@ -23,12 +23,19 @@ at runtime.
 
 ### Getting started with the Maven project
 
+#### Software Prequisities
+
+- [Git](https://git-scm.com/)
+- [Java](https://www.java.com/en/)
+- [Maven](https://maven.apache.org/)
+
+
 #### Project Structure
 
 Implementing project inherintance, we follow an hierarchical parent - child structure, with:
 
 - [seip-lab](https://www.github.com/demetres12/seip-lab), being the **parent**, and
-- [gradeshistogram](https://www.github.com/demetres12/seip-lab/gradeshistogram), being the **module**
+	- [gradeshistogram](https://www.github.com/demetres12/seip-lab/tree/development/gradeshistogram), being the **module**
 
 ##### Structure of the module before building
 <h1 align="center">
