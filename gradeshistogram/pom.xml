@@ -5,9 +5,9 @@
 	
 	<!-- Declaring the parent's POM information' -->
   	<parent>
-    	<groupId>gr.aueb.dmst.dimitriskokkotas</groupId>
-    	<artifactId>seip2023_practical_assignments</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
+        <groupId>gr.aueb.dmst.dimitriskokkotas</groupId>
+        <artifactId>seip2023_practical_assignments</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
   	</parent>
   	
   	<artifactId>gradeshistogram</artifactId>
@@ -22,9 +22,9 @@
 			 The dependency refers only to the module.
 		-->
 		<dependency>
-    		<groupId>org.jfree</groupId>
-    		<artifactId>jfreechart</artifactId>
-    		<version>1.5.4</version>
+    	    <groupId>org.jfree</groupId>
+    	    <artifactId>jfreechart</artifactId>
+    	    <version>1.5.4</version>
 		</dependency>
 	</dependencies>
 	
