@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 /**
- * The HistogramGenerator program generates and presents a grades frequencies' 
+ * The HistogramGenerator program generates and presents a grades frequencies 
  * chart, provided with an array of integers, representing the grades. 
  * The grades are passed via the command line as a txt file. HistogramGenerator
  * implements JFree java library features in order to produce the chart.
@@ -30,7 +30,7 @@ public class HistogramGenerator {
 	 * grades and visualizes the histogram so it's visible to the end user in 
 	 * a proper way.
 	 * 
-	 * @param gradeValues Signle dimension int array
+	 * @param gradeValues Single dimension int array
 	 * @return Nothing
 	 */
 	public void generateChart(int[] gradeValues) {
@@ -76,14 +76,13 @@ public class HistogramGenerator {
 	}
 
 	/**
-	 * The readGrades method , accepts a string argument, that being the filename,
+	 * The readGrades method , accepts a String value, that being the filename,
 	 * reads and fetches the grades from the txt and uses a delimiter
 	 * to hold them in gradeValues array.
 	 * @param filename String argument that holds the filename
 	 * @exception IOException On file path error
 	 * @return int[] An integer array containing the grades
 	 */
-
 	public int[] readGrades(String filename) {
 		// create an arraylist, in case the length of the grades.txt file is dynamic.
 		ArrayList<Integer> data = new ArrayList<>();
@@ -91,9 +90,9 @@ public class HistogramGenerator {
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String line;
 			while ((line = br.readLine()) != null) {
-				int num = Integer.parseInt(line);
+				int value = Integer.parseInt(line);
 				// add each line (i.e. grade) into the arraylist
-				data.add(num);
+				data.add(value);
 			}
 		} catch (IOException e) {
 			System.out.println("File not found.");
@@ -109,8 +108,8 @@ public class HistogramGenerator {
 	}
 	
 	/**
-	 * The main method , accepts a string argument, that being the grades.txt 
-	 * file, calls the readGrades method to store the grades in an integer
+	 * The main method , accepts a String value, that being the grades.txt 
+	 * resource, calls the readGrades method to store the grades in an integer
 	 * array and calls generateChart method, in order to provide functionality
 	 * to the program.
 	 * 
