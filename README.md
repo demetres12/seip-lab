@@ -34,8 +34,8 @@ at runtime.
 
 Implementing project inherintance, we follow an hierarchical parent - child structure, with:
 
-- [seip-lab](https://www.github.com/demetres12/seip-lab), being the **parent**, and
-	- [gradeshistogram](https://www.github.com/demetres12/seip-lab/tree/development/gradeshistogram), being the **module**
+- [seip-lab](https://www.github.com/demetres12/seip-lab) --> being the **parent**, and
+	- [gradeshistogram](https://www.github.com/demetres12/seip-lab/tree/development/gradeshistogram) --> being the **module**
 
 ##### Structure of the module before building
 <h1 align="center">
