@@ -85,7 +85,7 @@ public class HistogramGenerator {
 	 * @exception IOException On file path error
 	 * @return int[] An integer array containing the grades
 	 */
-	public int[] readGrades(String filename) {
+	public int[] readGrades(String filename) throws IOException {
 		// create an Arraylist, in case the length of the grades.txt file is dynamic
 		ArrayList<Integer> data = new ArrayList<>();
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
