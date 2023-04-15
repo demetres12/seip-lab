@@ -54,6 +54,10 @@ build/
 # vim files
 *.swp
 
+# Other hidden files
+
 .DS_Store
+
+# Seip Lab output (bin dir)
 
 seip2023_practical_assignments/
