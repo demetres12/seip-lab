@@ -13,8 +13,14 @@
   	<artifactId>gradeshistogram</artifactId>
   	<name>Grades Histogram</name>
   	<description>
-		Grades Histogram is a module, which serves the presentation and
-		generation of the grades frequencies' chart / histogram.
+		Grades Histogram, being dependant on JFree java library, serves the generation and
+		presentation of grades frequencies' chart / histogram. Within the HistogramGenerator
+		java class, readGrades and generateChart methods are being called. The former reads
+		grades as integers, included in a txt file, while the latter, provided with the
+		aforementioned grades, generates the histogram, that being a XYLineChart chart.
+		HistogramGenerator class belongs to the gradeshistogram package. Using Maven build
+		automation tool, compiling code and packaging result to the target dir containing
+		the fat-jar, including the dependencies.
 	</description>
 	
 	<dependencies>

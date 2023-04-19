@@ -11,8 +11,10 @@
   
   	<name>SEIP Lab</name>
   	<description>
-	  SEIP Lab is the parent Maven project, being the root for the lab
-	  assignments submissions.
+	  SEIP Lab is the root repository, including the lab assignments
+	  submissions for the needs of Software Engineering in Practice course. 
+	  Build automation tools, unit testing and design patterns are
+	  the key topics we are going to get involved in.
   	</description>
   	  	
   	<properties>
