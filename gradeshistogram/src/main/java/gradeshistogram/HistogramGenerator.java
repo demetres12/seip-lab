@@ -10,6 +10,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.TreeSet;
+import java.util.Collections;
 
 
 /**
@@ -46,11 +48,29 @@ public class HistogramGenerator {
 		XYSeries data = new XYSeries("random values");
 
 		/*
-		 * Populating the XYSeries data object from the input Integer array
-		 * values.
+		 *	Create Arraylist to keep the grade values, in order to count frequencies
+		 *  via Collections' frequency method.
 		 */
-		for (int i = 0; i < gradeValues.length; i++) {
-			data.add(i, gradeValues[i]);
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		// create a TreeSet to keep grades sorted and remove duplicates
+		TreeSet<Integer> tree = new TreeSet<Integer>();
+
+		// pass the elements of gradeValues into both the tree and list
+		for(int i = 0; i< gradeValues.length; i++) {
+			tree.add(gradeValues[i]);
+			list.add(gradeValues[i]);
+		}
+
+		// create the new sorted array by converting TreeSet to int array
+		int[] sortedGrades = tree.stream().mapToInt(Integer::intValue).toArray();
+		
+		/*
+		 * Populating the XYSeries data object from the input Integer array
+		 * values.For each unique element i.e. grade, we add it's value and it's frequency
+		 */
+		for(int i = 0; i < sortedGrades.length; i++) {
+			data.add(sortedGrades[i], Collections.frequency(list, sortedGrades[i]));
 		}
 
 		// add the series to the dataset
@@ -62,7 +82,7 @@ public class HistogramGenerator {
 
 		// Declare and initialize a createXYLineChart JFreeChart
 		JFreeChart chart = ChartFactory.createXYLineChart("Grades Frequency",
-				"Grades", "Scale", dataset,
+				"Grades", "Frequency", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 
 		/*
