@@ -48,8 +48,8 @@ public class HistogramGenerator {
 		XYSeries data = new XYSeries("random values");
 
 		/*
-		 *	Create Arraylist to keep the grade values, in order to count frequencies
-		 *  via Collections' frequency method.
+		 * Create Arraylist to keep the grade values, in order to count
+		 * frequencies via Collections' frequency method.
 		 */
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
