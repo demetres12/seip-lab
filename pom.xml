@@ -26,5 +26,6 @@
 	<!-- Listing the children - modules of SEIP Lab project -->
   	<modules>
   		<module>gradeshistogram</module>
+  		<module>unittesting</module>
   	</modules> 	
 </project>
