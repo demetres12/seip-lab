@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Declaring the parent's POM information -->
+  	<parent>
+    		<groupId>gr.aueb.dmst.dimitriskokkotas</groupId>
+    		<artifactId>seip2023_practical_assignments</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+  	</parent>
+  	
+  	<!-- Declaring the module's POM information -->
+  	<artifactId>unittesting</artifactId>
+  	<name>Unit Testing practice project</name>
+  	<description>
+		Unit Testing practice project serves being dependant on JFree java library, serves the generation and
+		presentation of grades frequencies' chart / histogram. Within the HistogramGenerator
+		java class, readGrades and generateChart methods are being called. The former reads
+		grades as integers, included in a txt file, while the latter, provided with the
+		aforementioned grades, generates the histogram, that being a XYLineChart chart.
+		HistogramGenerator class belongs to the gradeshistogram package. Using Maven build
+		automation tool, compiling code and packaging result to the target dir containing
+		the fat-jar, including the dependencies.
+	</description>
+	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit
+			 The dependency refers only to the module 
+		-->
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.12</version>
+    		<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
