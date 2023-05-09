@@ -14,14 +14,12 @@
   	<artifactId>unittesting</artifactId>
   	<name>Unit Testing practice project</name>
   	<description>
-		Unit Testing practice project serves being dependant on JFree java library, serves the generation and
-		presentation of grades frequencies' chart / histogram. Within the HistogramGenerator
-		java class, readGrades and generateChart methods are being called. The former reads
-		grades as integers, included in a txt file, while the latter, provided with the
-		aforementioned grades, generates the histogram, that being a XYLineChart chart.
-		HistogramGenerator class belongs to the gradeshistogram package. Using Maven build
-		automation tool, compiling code and packaging result to the target dir containing
-		the fat-jar, including the dependencies.
+		Unit Testing practice project challenges the functionality of multiple
+		operations performed by the io and math packages. Essentially, within
+		the test classes, individual units of code are isolated, in order to
+		verify that each and every one has the excpected behavior. Cases provided
+		are required to be separately testable. Exception test cases are taken into 
+		consideration as well normal functionality verification.		
 	</description>
 	
 	<dependencies>
@@ -29,10 +27,10 @@
 			 The dependency refers only to the module 
 		-->
 		<dependency>
-    		<groupId>junit</groupId>
-    		<artifactId>junit</artifactId>
-    		<version>4.12</version>
-    		<scope>test</scope>
+    	    <groupId>junit</groupId>
+    	    <artifactId>junit</artifactId>
+    	    <version>4.12</version>
+    	    <scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
