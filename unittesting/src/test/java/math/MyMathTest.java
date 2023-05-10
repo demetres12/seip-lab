@@ -1,6 +1,5 @@
 package math;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
@@ -17,10 +16,11 @@ import org.junit.rules.ExpectedException;
  * @since   May 2023
  */
 public class MyMathTest {
-	MyMath mm = new MyMath();
 	
 	@Rule
 	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
+	
+	private final MyMath mm = new MyMath();
 	
 	/*
 	 * A test case for the exceptions caused when
