@@ -1,6 +1,6 @@
-# Unit Testing
+# Unit Testing Assignment
 
-The current module serves the unit testing of several Java source files. Implemented with the Maven build
+The current module serves the unit testing of the given Java source files. Implemented with the Maven build
 automation tool, several test cases evaluate the functionality of multiple operations. Aiming to verify
 the tests' expected behavior, we take into consideration exception cases as well a plethora of challenging
 instances. Being dependant on the JUnit testing framework (version 4.12), we apply a variety of techniques
@@ -34,29 +34,29 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 
 ### Step by Step
 
-1. First you will need to take a look at the main [README](https://github.com/demetres12/seip-lab/blob/development-2/README.md), in order to get familiar with Maven's lifecycles.
+1. Initially, it's recommended to take a look at the main [README](https://github.com/demetres12/seip-lab/blob/development-2/README.md), in order to get familiar with Maven's lifecycles.
 
-2. In case you need to run each and every test, execute the following command.
+2. In case you need to run all the tests, execute the following command.
 
 ```bash
 mvn test
 ```
 
-3. Otherwise, to run an individual test class, the command stated below is what you need.
+3. Otherwise, to run an individual test class, execute the command stated below.
 
 ```bash
  mvn -Dtest=MyMathTest test
 ```
-In our example, we run each and every test case / method in reference to the MyMathTest java class.
+- In our example, we run each and every test case / method in reference to the MyMathTest java class.
 
 4. Finally, if you need to run a single test case / method, specify that by the upcoming command.
 
 ```bash
  mvn -Dtest=MyMathTest#factorial test
 ```
-In our example, we run the `factorial` test case / method in reference to the MyMathTest java class.
+- In our example, we run the `factorial` test case / method in reference to the MyMathTest java class.
 
-- Note that only classes with a Test suffix located in the src/test will be executed and reported as Tests.
+- Note that only classes with a **Test suffix** located in the src/test will be executed and reported as Tests.
 
 ### Continuous Integration
 
