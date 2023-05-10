@@ -1,8 +1,7 @@
-# SEIP Lab Assignments
+# SEIP Lab Assignments ![Build Status](https://github.com/demetres12/seip-lab/actions/workflows/maven.yml/badge.svg)
 
 <h1 align="center">
 	<img height="171"  width="800" src="media/dmst-aueb.jpeg" alt="">
-	https://github.com/demetres12/seip-lab/actions/workflows/.github/workflows/maven.yml/badge.svg
 </h1>
 
 The main purpose of the current repository is the submission of the lab
