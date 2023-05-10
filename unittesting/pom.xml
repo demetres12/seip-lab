@@ -15,7 +15,7 @@
   	<name>Unit Testing practice project</name>
   	<description>
 		Unit Testing practice project challenges the functionality of multiple
-		operations performed by the io and math packages. Essentially, within
+		operations performed by a given set of Java source files. Essentially, within
 		the test classes, individual units of code are isolated, in order to
 		verify that each and every one has the excpected behavior. Cases provided
 		are required to be separately testable. Exception test cases are taken into 
