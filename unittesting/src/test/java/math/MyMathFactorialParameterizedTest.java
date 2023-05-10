@@ -4,11 +4,12 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Test;
-import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * A test class that implements a Parameterized test
@@ -51,7 +52,7 @@ public class MyMathFactorialParameterizedTest {
 	 */
 	@Test
 	public void test_factorialShouldBeCalculatedCorrectly() {
-		Assert.assertEquals(fact, mm.factorial(n));
+		assertEquals(fact, mm.factorial(n));
 	}
 	
 	/*
