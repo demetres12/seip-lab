@@ -22,13 +22,13 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class MyMathFactorialParameterizedTest {
 	
+	private final MyMath mm = new MyMath();
+	
 	// The value is the unique identifier of each parameter
 	@Parameter (value = 0) 
 	public int n;
 	@Parameter (value = 1)
 	public int fact;
-	
-	MyMath mm = new MyMath();
 	
 	/*
 	 * The following method generates the input values 
@@ -50,7 +50,7 @@ public class MyMathFactorialParameterizedTest {
 	 * parameters. 
 	 */
 	@Test
-	public void testPowerOfTwoWithNormalCases() {
+	public void test_factorialShouldBeCalculatedCorrectly() {
 		Assert.assertEquals(fact, mm.factorial(n));
 	}
 	
