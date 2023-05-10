@@ -3,8 +3,8 @@
 The current module serves the unit testing of several Java source files. Implemented with the Maven build
 automation tool, several test cases evaluate the functionality of multiple operations. Aiming to verify
 the tests' expected behavior, we take into consideration exception cases as well a plethora of challenging
-instances. Fot on the JUnit testing framework (version 4.12), we apply a variety of techniques
-for the needs of sufficient testing coverage level.
+instances. Being dependant on the JUnit testing framework (version 4.12), we apply a variety of techniques
+for the needs of a sufficient testing coverage level.
 
 ## Getting started with the Unit Testing project
 
@@ -34,7 +34,7 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 
 ### Step by Step
 
-1. First you will need to take a look at the main [README](https://github.com/demetres12/seip-lab/blob/development-2/README.md), in order to get familiarized with Maven's lifecycles.
+1. First you will need to take a look at the main [README](https://github.com/demetres12/seip-lab/blob/development-2/README.md), in order to get familiar with Maven's lifecycles.
 
 2. In case you need to run each and every test, execute the following command.
 
