@@ -28,7 +28,7 @@ public class ArithmeticOperations {
 	 * @return the result of the division between numerator and denominator
 	 * @exception ArithmeticException when denominator is zero but numerator is not
 	 */
-	public double divide(double numerator, double denominator) {
+	public double divide(double numerator, double denominator) throws ArithmeticException {
 		// Use compare() method of Double class for more precise comparisons
 		if ((Double.compare(numerator, 0.0) == 0)
 				&& (Double.compare(denominator, 0.0) == 0)) {
@@ -53,7 +53,7 @@ public class ArithmeticOperations {
 	 * @exception IllegalArgumentException when <b>x</b> or <b>y</b> are negative numbers 
 	 * @exception IllegalArgumentException when the product does not fit in an Integer variable 
 	 */
-	public int multiply(int x, int y) {
+	public int multiply(int x, int y) throws IllegalArgumentException {
 		if (x < 0 || y < 0) {
 			throw new IllegalArgumentException("x & y should be >= 0");
 		/* Otherwise, ArithmeticException will be thrown
