@@ -2,6 +2,7 @@
 
 <h1 align="center">
 	<img height="171"  width="800" src="media/dmst-aueb.jpeg" alt="">
+	https://github.com/demetres12/seip-lab/actions/workflows/.github/workflows/maven.yml/badge.svg
 </h1>
 
 The main purpose of the current repository is the submission of the lab
@@ -23,7 +24,7 @@ at runtime.
 
 ### Getting started with the Maven project
 
-#### Software Prequisities
+#### Software Requirements
 
 - [Git](https://git-scm.com/)
 - [Java](https://www.java.com/en/)
@@ -35,7 +36,7 @@ at runtime.
 Implementing project inherintance, we follow an hierarchical parent - child structure, with:
 
 - [seip-lab](https://www.github.com/demetres12/seip-lab) --> being the **parent**, and
-	- [gradeshistogram](https://www.github.com/demetres12/seip-lab/tree/development/gradeshistogram) --> being the **module**
+	- [gradeshistogram](https://www.github.com/demetres12/seip-lab/tree/development-2/gradeshistogram) --> being the **module**
 
 ##### Structure of the module before building
 <h1 align="center">
@@ -84,6 +85,6 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 ```
 Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that we use the `maven-assembly-plugin`, in order to package dependencies into the main .jar output file.
 
+## Unit Testing Assignment
 
-
-
+Regarding the unit testing practice project there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md) file, that approaches the module in a practical and descriptive way.
