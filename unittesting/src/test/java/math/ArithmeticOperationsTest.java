@@ -1,9 +1,10 @@
 package math;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * The ArithmeticOperationsTest serves the unit testing of
@@ -18,7 +19,11 @@ import org.junit.rules.ExpectedException;
  * @since   May 2023
  */
 public class ArithmeticOperationsTest {
-	ArithmeticOperations ao = new ArithmeticOperations();
+	
+	@Rule
+	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
+	
+	private final ArithmeticOperations ao = new ArithmeticOperations();
 	
 	/*
 	 * A unit test that verifies the correctness of division
@@ -26,7 +31,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_quotientShouldBeCalculatedCorrectly() {
-		Assert.assertEquals(2.5, ao.divide(5.0, 2.0), 0.0);
+		assertEquals(2.5, ao.divide(5.0, 2.0), 0.0);
 	}
 	
 	/*
@@ -36,7 +41,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getQuotientShouldReturnZeroValue() {
-		Assert.assertEquals(0.0, ao.divide(0.0, 2.0), 0.0);
+		assertEquals(0.0, ao.divide(0.0, 2.0), 0.0);
 	}
 	
 	/*
@@ -46,7 +51,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getQuotientShouldReturnNaNValue() {
-		Assert.assertEquals(Double.NaN, ao.divide(0.0, 0.0), 0.0);
+		assertEquals(Double.NaN, ao.divide(0.0, 0.0), 0.0);
 	}
 	 
 	/*
@@ -65,7 +70,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_productShouldBeCalculatedCorrectly() {
-		Assert.assertEquals(8, ao.multiply(2, 4));
+		assertEquals(8, ao.multiply(2, 4));
 	}
 	
 	/*
@@ -75,7 +80,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProductShouldReturnZeroValue() {
-		Assert.assertEquals(0, ao.multiply(16, 0));
+		assertEquals(0, ao.multiply(16, 0));
 	}
 	
 	/*
@@ -85,11 +90,8 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProductShouldReturnZeroValueBoth() {
-		Assert.assertEquals(0, ao.multiply(0, 0));
+		assertEquals(0, ao.multiply(0, 0));
 	}
-	
-	@Rule
-	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
 	
 	/*
 	 * A test case for the exceptions caused when
@@ -136,6 +138,6 @@ public class ArithmeticOperationsTest {
 	public void test_getProduct_DoesNotFitInInteger_RuleException() throws IllegalArgumentException {
 	  thrown.expect(IllegalArgumentException.class);
 	  thrown.expectMessage("The product does not fit in an Integer variable");
-	  ao.multiply(((Integer.MAX_VALUE / 2) + 1), 2);
+	  ao.multiply(((2147483647 / 2) + 1), 2);
 	}
 }
