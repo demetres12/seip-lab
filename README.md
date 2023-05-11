@@ -1,4 +1,4 @@
-# SEIP Lab Assignments ![Build Status](https://github.com/demetres12/seip-lab/actions/workflows/maven.yml/badge.svg)
+# SEIP Lab Assignments [![Build Status](https://github.com/demetres12/seip-lab/actions/workflows/maven.yml/badge.svg)](https://github.com/demetres12/seip-lab/actions)
 
 <h1 align="center">
 	<img height="171"  width="800" src="media/dmst-aueb.jpeg" alt="">
@@ -51,7 +51,7 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 
 #### What to do?
 
-1. First you will need to clone the maven project "seip-lab", so you can obtain the source code locally. We are going to do that through the terminal. For Unix-based os open the utility application "Terminal", while for MS Windows use a Unix-like environment, like CygWin.
+1. First you will need to clone the maven project "seip-lab", so you can obtain the source code locally. We are going to do that through the terminal. For Unix-based OS open the utility application "Terminal", while for MS Windows use a Unix-like environment (e.g.CygWin).
 
 ```bash
 git clone https://github.com/demetres12/seip-lab.git
