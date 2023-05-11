@@ -45,18 +45,19 @@ mvn test
 3. Otherwise, to run an individual test class, execute the command stated below.
 
 ```bash
+# In our example, we run each and every test case / method in reference to the MyMathTest java class.
  mvn -Dtest=MyMathTest test
 ```
-- In our example, we run each and every test case / method in reference to the MyMathTest java class.
 
 4. Finally, if you need to run a single test case / method, specify that by the upcoming command.
 
 ```bash
+# In our example, we run the `factorial` test case / method in reference to the MyMathTest java class.
  mvn -Dtest=MyMathTest#factorial test
 ```
-- In our example, we run the `factorial` test case / method in reference to the MyMathTest java class.
 
 - Note that only classes with a **Test suffix** located in the src/test will be executed and reported as Tests.
+- When running signle test classes or methods, make sure that your working directory is set to the dir that contains the `pom.xml` file.
 
 ### Continuous Integration
 
