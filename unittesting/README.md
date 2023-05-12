@@ -39,6 +39,7 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 2. In case you need to run all the tests, execute the following command.
 
 ```bash
+# In our example we run each and every test case / method located in the src/test.
 mvn test
 ```
 
@@ -56,8 +57,15 @@ mvn test
  mvn -Dtest=MyMathTest#factorial test
 ```
 
+#### Noteworthy Comments
+
+- Following Unit Testing optimal practices, we consider
+    - **Naming Conventions**, 
+    - **Code Readability / Maintenability**, and
+    - **Annotations / Assertions proper declaration**
+to be of paramount importance.
 - Note that only classes with a **Test suffix** located in the src/test will be executed and reported as Tests.
-- When running signle test classes or methods, make sure that your working directory is set to the dir that contains the `pom.xml` file.
+- When running signle test classes or methods, make sure that your working directory is set accordingly, so it includes the `pom.xml` file.
 
 ### Continuous Integration
 
