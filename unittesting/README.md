@@ -59,11 +59,8 @@ mvn test
 
 #### Noteworthy Comments
 
-- Following Unit Testing optimal practices, we consider
-    - **Naming Conventions**, 
-    - **Code Readability / Maintenability**, and
-    - **Annotations / Assertions proper declaration**
-to be of paramount importance.
+- Following Unit Testing optimal practices, we consider *naming conventions, code readability / maintenability and Annotations / Assertions
+proper declaration* to be of paramount importance.
 - Note that only classes with a **Test suffix** located in the src/test will be executed and reported as Tests.
 - When running signle test classes or methods, make sure that your working directory is set accordingly, so it includes the `pom.xml` file.
 
