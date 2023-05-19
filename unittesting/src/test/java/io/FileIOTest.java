@@ -27,7 +27,7 @@ public class FileIOTest {
 	private final FileIO fio = new FileIO();
 	
 	/*
-	 * A unit test that verifies that the program reads
+	 * A unit test verifying that the program reads
 	 * a file successfully.
 	 */
 	@Test
@@ -42,7 +42,7 @@ public class FileIOTest {
 	
 	/*
 	 * A test case for the exceptions caused when
-	 * the given file doesn;t exist. Testing
+	 * the given file doesn't exist. Testing
 	 * the exception is performed with a @Rule.
 	 */
 	@Test
@@ -66,12 +66,11 @@ public class FileIOTest {
 	}
 	
 	/*
-	 * A test case for the exceptions caused when the
-	 * given file does not contain any numbers.
-	 * Testing the exception is performed with a @Rule.
+	 * A unit test verifying that any non-Integer value
+	 * is being ignored and not returned by readFile method.
 	 */
 	@Test
-	public void testReadFileContainsInvalidEntries() throws IllegalArgumentException {
+	public void testReadFileContainsInvalidEntries() {
 			int[] expectedNumbers = new int[] {
 					2, 43, 99, 24, 39, 16, 13, 47
 				};
