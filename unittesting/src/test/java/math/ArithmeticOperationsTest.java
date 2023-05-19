@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  * ArithmeticOperations operations. Includes a plethora
  * of test cases, challenging the functionality of both
  * divide and multiply methods. Assertions, exceptions
- * testing etc. are some key options applied within
+ * testing etc. are some key features applied within
  * the test methods, provided by JUnit.
  *
  * @author  dkokkotas
@@ -27,7 +27,7 @@ public class ArithmeticOperationsTest {
 	
 	/*
 	 * A unit test that verifies the correctness of division
-	 * process between two double arguments
+	 * process between two double arguments.
 	 */
 	@Test
 	public void test_quotientShouldBeCalculatedCorrectly() {
@@ -37,7 +37,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A unit test that verifies that the division between
 	 * a zero numerator and a non-zero denominator
-	 * returns zero value
+	 * returns zero value.
 	 */
 	@Test
 	public void test_getQuotientShouldReturnZeroValue() {
@@ -47,7 +47,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A unit test that verifies that the division between
 	 * numerator and denominator, both of them provided
-	 * with zero values, returns Nan value
+	 * with zero values, returns Nan value.
 	 */
 	@Test
 	public void test_getQuotientShouldReturnNaNValue() {
@@ -56,7 +56,7 @@ public class ArithmeticOperationsTest {
 	 
 	/*
 	 * A unit test that verifies that an invalid zero
-	 * denominator causes ArithmeticException
+	 * denominator causes ArithmeticException.
 	 */
 	@Test(expected = ArithmeticException.class) 
 	public void test_getQuotient_zero_exception() { 
@@ -66,7 +66,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A unit test that verifies the correctness of
 	 * multiplication process between two integer
-	 * arguments
+	 * arguments.
 	 */
 	@Test
 	public void test_productShouldBeCalculatedCorrectly() {
@@ -76,7 +76,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A unit test that verifies that the multiplication
 	 * between a zero and a non-zero integers returns
-	 * zero value
+	 * zero value.
 	 */
 	@Test
 	public void test_getProductShouldReturnZeroValue() {
@@ -86,7 +86,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A unit test that verifies that the multiplication
 	 * between two integers, both of them provided
-	 * with zero values, returns 0
+	 * with zero values, returns 0.
 	 */
 	@Test
 	public void test_getProductShouldReturnZeroValueBoth() {
@@ -96,7 +96,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * argument's X value is negative. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentX_RuleException() throws IllegalArgumentException {
@@ -108,7 +108,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * argument's Y value is negative. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentY_RuleException() throws IllegalArgumentException {
@@ -120,7 +120,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * both arguments' values are negative. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentsXandY_RuleException() throws IllegalArgumentException {
@@ -132,7 +132,7 @@ public class ArithmeticOperationsTest {
 	/*
 	 * A test case for the exceptions caused when the
 	 * product does not fit in an Integer variable.
-	 * Testing the exception is performed with a @Rule
+	 * Testing the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getProduct_DoesNotFitInInteger_RuleException() throws IllegalArgumentException {
