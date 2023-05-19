@@ -23,6 +23,37 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core
+			 The dependency is inherited from the modules
+		-->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>4.5.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<!-- required for code coverage reporting -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.10</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+		
 	<!-- Listing the children - modules of SEIP Lab project -->
   	<modules>
   		<module>gradeshistogram</module>
