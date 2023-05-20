@@ -23,13 +23,13 @@ Implementing project inherintance, we follow an hierarchical parent - child stru
 
 #### Structure of the module before building
 <h1 align="center">
-	<img height="600"  width="500" src="../media/test-module-tree-before-build.png" alt="">
+	<img height="600"  width="500" src="../media/unittesting-tree-before-build.png" alt="">
 </h1>
 
-#### Structure of the module after building
+#### Structure of the module's build output
 
 <h1 align="center">
-	<img height="600"  width="500" src="../media/test-module-tree-after-build.png" alt="">
+	<img height="600"  width="500" src="../media/unittesting-tree-build-output.png" alt="">
 </h1>
 
 ### Step by Step
