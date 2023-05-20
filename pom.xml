@@ -24,6 +24,15 @@
 	</properties>
 	
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit
+			 The dependency is inherited from the modules
+		-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core
 			 The dependency is inherited from the modules
 		-->

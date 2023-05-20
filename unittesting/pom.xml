@@ -21,16 +21,4 @@
 		are required to be separately testable. Exception test cases are taken into 
 		consideration as well normal functionality verification.		
 	</description>
-	
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/junit/junit
-			 The dependency refers only to the module 
-		-->
-		<dependency>
-		    	<groupId>junit</groupId>
-    			<artifactId>junit</artifactId>
-    			<version>4.12</version>
-    			<scope>test</scope>
-		</dependency>
-	</dependencies>
 </project>
