@@ -61,10 +61,6 @@ mvn test
 
 - Following Unit Testing optimal practices, we consider *naming conventions, code readability / maintenability and Annotations / Assertions
 proper declaration* to be of paramount importance.
+- Our project utilizes Mockito Java framework, in order to handle effectively dependencies in the context of unit testing.
 - Note that only classes with a **Test suffix** located in the src/test will be executed and reported as Tests.
 - When running signle test classes or methods, make sure that your working directory is set accordingly, so it includes the `pom.xml` file.
-
-### Continuous Integration
-
-The current project utilizes Github Actions for the purpose of continuous integration. You may take a look
-at the [workflow file](https://github.com/demetres12/seip-lab/blob/development-2/.github/workflows/maven.yml), where as declared, Github Actions CI services test and build the application upon each `push` and `pull-request`. 
