@@ -1,7 +1,7 @@
 package math;
 
 /**
- * The MathOperations provides simple arithmetic operations
+ * The ArithmeticOperations provides simple arithmetic operations
  * of division and multiplication that serve as hands-on
  * practice on Unit Testing.
  *

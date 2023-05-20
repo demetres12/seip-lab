@@ -42,7 +42,7 @@ public class FileIO {
 					int number = Integer.parseInt(line);
 					numbersList.add(number);
 				} catch (NumberFormatException e) {
-					// ignore any non int data value
+					// Ignore any non-int data value
 					continue;
 				}
 			}
@@ -53,8 +53,7 @@ public class FileIO {
 		if (numbersList.size() == 0) 
 			throw new IllegalArgumentException("Given file is empty");
 		
-		// Convert a List to an array using 
+		// Convert list to int array 
 		return numbersList.stream().mapToInt(i -> i).toArray();
 	}
-
 }

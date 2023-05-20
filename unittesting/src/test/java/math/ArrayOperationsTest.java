@@ -29,8 +29,8 @@ public class ArrayOperationsTest {
 	
 	
 	/*
-	 * A unit test that verifies the correctness of division
-	 * process between two double arguments.
+	 * A unit test verifying that the program reads a file
+	 * with numbers successfully and returns only the prime values
 	 */
 	@Test
 	public void test_getPrimes_Mocking() {

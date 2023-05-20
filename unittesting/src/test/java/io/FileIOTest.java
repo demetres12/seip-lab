@@ -28,12 +28,12 @@ public class FileIOTest {
 	
 	/*
 	 * A unit test verifying that the program reads
-	 * a file successfully.
+	 * a file with numbers successfully.
 	 */
 	@Test
 	public void test_readFileNormalCase() {
 		int[] expectedNumbers = new int[] {
-			14, 28, -9, 2, 136, 37, 45, 92, 34
+			14, 28, -9, 2, 136, 37, 45, 92, 34, 89
 		};
 		String validInputFilePath = resourcesPath.concat("data.txt");
 		

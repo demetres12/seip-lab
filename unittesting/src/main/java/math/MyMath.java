@@ -14,7 +14,7 @@ public class MyMath {
 	
 	/**
 	 * Performs the basic factorial algorithm.
-	 * @param n The provided value, upon which we will calculate the factorial
+	 * @param n The provided int value, upon which we will calculate the factorial
 	 * @return fact The result of the factorial algorithm for the provided input
 	 * @exception IllegalArgumentException When n is less than 0 or greater than 12 
 	 */
@@ -30,8 +30,8 @@ public class MyMath {
 		}
 	}
 	/**
-	 * Checks whether a given int value is either a prime number or a composite
-	 * @param n The provided value, upon which we will check it's primality
+	 * Checks whether a given int value is either a prime or a composite number
+	 * @param n The provided int value, upon which we will check it's primality
 	 * @return {@code true} if the number is prime, {@code false} otherwise
 	 * @exception IllegalArgumentException When n is less than 2 
 	 */

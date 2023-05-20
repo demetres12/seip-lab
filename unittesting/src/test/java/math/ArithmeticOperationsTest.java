@@ -26,7 +26,7 @@ public class ArithmeticOperationsTest {
 	private final ArithmeticOperations ao = new ArithmeticOperations();
 	
 	/*
-	 * A unit test that verifies the correctness of division
+	 * A unit test verifying the correctness of division
 	 * process between two double arguments.
 	 */
 	@Test
@@ -35,7 +35,7 @@ public class ArithmeticOperationsTest {
 	}
 	
 	/*
-	 * A unit test that verifies that the division between
+	 * A unit test verifying that the division between
 	 * a zero numerator and a non-zero denominator
 	 * returns zero value.
 	 */
@@ -45,7 +45,7 @@ public class ArithmeticOperationsTest {
 	}
 	
 	/*
-	 * A unit test that verifies that the division between
+	 * A unit test verifying that the division between
 	 * numerator and denominator, both of them provided
 	 * with zero values, returns Nan value.
 	 */
@@ -55,16 +55,16 @@ public class ArithmeticOperationsTest {
 	}
 	 
 	/*
-	 * A unit test that verifies that an invalid zero
+	 * A unit test verifying that an invalid zero
 	 * denominator causes ArithmeticException.
 	 */
 	@Test(expected = ArithmeticException.class) 
-	public void test_getQuotient_zero_exception() { 
+	public void test_getQuotient_zero_exception() throws IllegalArgumentException { 
 		ao.divide(2.0, 0.0);
 	}
 	
 	/*
-	 * A unit test that verifies the correctness of
+	 * A unit test verifying the correctness of
 	 * multiplication process between two integer
 	 * arguments.
 	 */
@@ -74,7 +74,7 @@ public class ArithmeticOperationsTest {
 	}
 	
 	/*
-	 * A unit test that verifies that the multiplication
+	 * A unit test verifying that the multiplication
 	 * between a zero and a non-zero integers returns
 	 * zero value.
 	 */
@@ -84,7 +84,7 @@ public class ArithmeticOperationsTest {
 	}
 	
 	/*
-	 * A unit test that verifies that the multiplication
+	 * A unit test verifying that the multiplication
 	 * between two integers, both of them provided
 	 * with zero values, returns 0.
 	 */
