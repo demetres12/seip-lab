@@ -107,7 +107,7 @@ After each build, the badge is updated with the corresponding build status, gree
 
 ## Code Coverage <a name="codecov"></a>
 
-[JaCoCo](https://github.com/jacoco/jacoco) is a code coverage reports generator for Java projects. Widely used for the needs of code coverage measurement and integrated with Maven build automation tool, JaCoCo heplps us make our tests more *reliable* and *effective*.
+[JaCoCo](https://github.com/jacoco/jacoco) is a code coverage reports generator for Java projects. Widely used for the needs of code coverage measurement and integrated with Maven build automation tool, JaCoCo helps us make our tests more *reliable* and *effective*.
 
 In case you need to generate reports for the modules, just execute the following command.
 

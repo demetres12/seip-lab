@@ -53,8 +53,8 @@ mvn test
 4. Finally, if you need to run a single test case / method, specify that by the upcoming command.
 
 ```bash
-# In our example, we run the `factorial` test case / method in reference to the MyMathTest java class.
- mvn -Dtest=MyMathTest#factorial test
+# In our example, we run the `test_isPrimeReturnsFalse` test case / method in reference to the MyMathTest java class.
+ mvn -Dtest=MyMathTest#test_isPrimeReturnsFalse test
 ```
 
 #### Noteworthy Comments
