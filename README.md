@@ -103,5 +103,27 @@ Regarding the unit testing practice project there is an individual [README](http
 The current project utilizes Github Actions for the purpose of continuous integration. You may take a look
 at the [workflow file](https://github.com/demetres12/seip-lab/blob/development-2/.github/workflows/maven.yml), where as declared, Github Actions CI services test and build the application upon each `push` and `pull-request`.
 
+After each build, the badge is updated with the corresponding build status, green for passes and red for failures.
+
 ## Code Coverage <a name="codecov"></a>
 
+[JaCoCo](https://github.com/jacoco/jacoco) is a code coverage reports generator for Java projects. Widely used for the needs of code coverage measurement and integrated with Maven build automation tool, JaCoCo heplps us make our tests more *reliable* and *effective*.
+
+In case you need to generate reports for the modules, just execute the following command.
+
+```bash
+mvn clean package jacoco:report
+```
+
+In the event we focus on the unittesting module, we need to change working directory, by:
+
+```bash
+cd unittesting/targe/site/jacoco
+```
+
+Eventually, the `jacoco` dir holds the generated reports in several formats (e.g., HTML,XML). Subsequently, `index.html` file provides the core information
+regarding code coverage by lines, branches, methods etc.
+
+<h1 align="center">
+	<img height="171"  width="800" src="media/code-coverage.png" alt="">
+</h1>
