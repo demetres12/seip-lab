@@ -30,7 +30,7 @@ public class MyMathTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * argument's value is negative. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getFactorial_negativeArgument_RuleException() throws IllegalArgumentException {
@@ -42,7 +42,7 @@ public class MyMathTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * argument's value is greater than 12. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_getFactorial_ArgumentGreaterThanTwelve_RuleException() throws IllegalArgumentException {
@@ -74,7 +74,7 @@ public class MyMathTest {
 	/*
 	 * A test case for the exceptions caused when
 	 * argument's value is less than 2. Testing
-	 * the exception is performed with a @Rule
+	 * the exception is performed with a @Rule.
 	 */
 	@Test
 	public void test_isPrime_ArgumentLessThanTwo_RuleException() throws IllegalArgumentException {
