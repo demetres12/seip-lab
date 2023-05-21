@@ -33,7 +33,7 @@ public class FileIOTest {
 	@Test
 	public void test_readFileNormalCase() {
 		int[] expectedNumbers = new int[] {
-			14, 28, -9, 2, 136, 37, 45, 92, 34, 89
+			14,28,-9,2,136,37,45,92,34,89
 		};
 		String validInputFilePath = resourcesPath.concat("data.txt");
 		
@@ -72,8 +72,8 @@ public class FileIOTest {
 	@Test
 	public void testReadFileContainsInvalidEntries() {
 			int[] expectedNumbers = new int[] {
-					2, 43, 99, 24, 39, 16, 13, 47
-				};
+					2,43,99,24,39,16,13,47
+			};
 				String validInputFilePath = resourcesPath.concat("vardata.txt");
 				
 				assertArrayEquals(expectedNumbers, fio.readFile(validInputFilePath));
