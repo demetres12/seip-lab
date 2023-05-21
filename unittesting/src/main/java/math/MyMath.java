@@ -18,7 +18,7 @@ public class MyMath {
 	 * @return fact The result of the factorial algorithm for the provided input
 	 * @exception IllegalArgumentException When n is less than 0 or greater than 12 
 	 */
-	public static int factorial(int n) {
+	public static int factorial(int n) throws IllegalArgumentException {
 		if (n < 0 || n > 12) {
 			throw new IllegalArgumentException("Invalid value provided. Input should be within the range [0,12]");
 		} else {
@@ -35,7 +35,7 @@ public class MyMath {
 	 * @return {@code true} if the number is prime, {@code false} otherwise
 	 * @exception IllegalArgumentException When n is less than 2 
 	 */
-	public boolean isPrime(int n) {
+	public boolean isPrime(int n) throws IllegalArgumentException {
 		if (n < 2) {
 			throw new IllegalArgumentException("Invalid value provided. Input should be greater than 1");
 		} else {

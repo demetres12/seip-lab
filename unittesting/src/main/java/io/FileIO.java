@@ -27,7 +27,7 @@ public class FileIO {
 	 * @exception IllegalArgumentException when the given file is empty
 	 * @exception IOException when an IO interruption occurs (not required to be tested)
 	 */
-	public int[] readFile(String filepath) {
+	public int[] readFile(String filepath) throws IllegalArgumentException  {
 		File file = new File(filepath);
 		if (!file.exists()) 
 			throw new IllegalArgumentException("Input file does not exist");
