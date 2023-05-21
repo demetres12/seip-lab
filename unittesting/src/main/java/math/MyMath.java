@@ -23,10 +23,10 @@ public class MyMath {
 			throw new IllegalArgumentException("Invalid value provided. Input should be within the range [0,12]");
 		} else {
 			int fact = 1;
-		    for (int i = 2; i <= n; i++) {
-		        fact = fact * i;
-		    }
-		    return fact;
+			for (int i = 2; i <= n; i++) {
+				fact = fact * i;
+			}
+			return fact;
 		}
 	}
 	/**

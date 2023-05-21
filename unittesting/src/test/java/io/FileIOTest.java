@@ -33,7 +33,7 @@ public class FileIOTest {
 	@Test
 	public void test_readFileNormalCase() {
 		int[] expectedNumbers = new int[] {
-			14,28,-9,2,136,37,45,92,34,89
+				14,28,-9,2,136,37,45,92,34,89
 		};
 		String validInputFilePath = resourcesPath.concat("data.txt");
 		
@@ -47,9 +47,9 @@ public class FileIOTest {
 	 */
 	@Test
 	public void test_readFile_DoesNotExist_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("Input file does not exist");
-	  fio.readFile("invalid.txt");
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Input file does not exist");
+		fio.readFile("invalid.txt");
 	}
 	
 	/*
@@ -59,10 +59,10 @@ public class FileIOTest {
 	 */
 	@Test
 	public void test_readFile_isEmpty_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("Given file is empty");
-	  String validInputFilePath = resourcesPath.concat("empty.txt");
-	  fio.readFile(validInputFilePath);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Given file is empty");
+		String validInputFilePath = resourcesPath.concat("empty.txt");
+		fio.readFile(validInputFilePath);
 	}
 	
 	/*
@@ -71,11 +71,11 @@ public class FileIOTest {
 	 */
 	@Test
 	public void testReadFileContainsInvalidEntries() {
-			int[] expectedNumbers = new int[] {
-					2,43,99,24,39,16,13,47
-			};
-				String validInputFilePath = resourcesPath.concat("vardata.txt");
+		int[] expectedNumbers = new int[] {
+				2,43,99,24,39,16,13,47
+		};
+		String validInputFilePath = resourcesPath.concat("vardata.txt");
 				
-				assertArrayEquals(expectedNumbers, fio.readFile(validInputFilePath));
+		assertArrayEquals(expectedNumbers, fio.readFile(validInputFilePath));
 	}
 }

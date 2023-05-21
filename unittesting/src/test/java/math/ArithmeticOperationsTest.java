@@ -100,9 +100,9 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentX_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("x & y should be >= 0");
-	  ao.multiply(-2, 5);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		ao.multiply(-2, 5);
 	}
 	
 	/*
@@ -112,9 +112,9 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentY_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("x & y should be >= 0");
-	  ao.multiply(2, -5);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		ao.multiply(2, -5);
 	}
 	
 	/*
@@ -124,9 +124,9 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProduct_negativeArgumentsXandY_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("x & y should be >= 0");
-	  ao.multiply(-2, -5);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		ao.multiply(-2, -5);
 	}
 	
 	/*
@@ -136,8 +136,8 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void test_getProduct_DoesNotFitInInteger_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("The product does not fit in an Integer variable");
-	  ao.multiply(((2147483647 / 2) + 1), 2);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("The product does not fit in an Integer variable");
+		ao.multiply(((2147483647 / 2) + 1), 2);
 	}
 }

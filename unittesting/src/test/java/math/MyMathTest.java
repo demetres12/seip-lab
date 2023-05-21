@@ -34,9 +34,9 @@ public class MyMathTest {
 	 */
 	@Test
 	public void test_getFactorial_negativeArgument_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("Invalid value provided. Input should be within the range [0,12]");
-	  mm.factorial(-1);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Invalid value provided. Input should be within the range [0,12]");
+		mm.factorial(-1);
 	}
 	
 	/*
@@ -46,9 +46,9 @@ public class MyMathTest {
 	 */
 	@Test
 	public void test_getFactorial_ArgumentGreaterThanTwelve_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("Invalid value provided. Input should be within the range [0,12]");
-	  mm.factorial(13);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Invalid value provided. Input should be within the range [0,12]");
+		mm.factorial(13);
 	}
 	
 	/*
@@ -78,8 +78,8 @@ public class MyMathTest {
 	 */
 	@Test
 	public void test_isPrime_ArgumentLessThanTwo_RuleException() throws IllegalArgumentException {
-	  thrown.expect(IllegalArgumentException.class);
-	  thrown.expectMessage("Invalid value provided. Input should be greater than 1");
-	  mm.isPrime(0);
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Invalid value provided. Input should be greater than 1");
+		mm.isPrime(0);
 	}
 }
