@@ -32,11 +32,10 @@ public class ArrayOperations {
 		List<Integer> primeNumbersList = new ArrayList<>();
 		int[] numbers = fileIo.readFile(filepath);
 		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] < 2) {
-				continue; // otherwise isPrime throws exception
-			}	
-			if (myMath.isPrime(numbers[i])) {
-				primeNumbersList.add(numbers[i]);
+			if (numbers[i] >= 2) { // otherwise isPrime throws exception
+				if (myMath.isPrime(numbers[i])) {
+					primeNumbersList.add(numbers[i]);
+				}
 			}
 		}
 		return primeNumbersList.stream().mapToInt(i -> i).toArray();
