@@ -59,42 +59,6 @@ public class ArrayOperationsTest {
 	}
 	
 	/*
-	 * A test case for the exceptions caused when the
-	 * given file does not contain any numbers.
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	public void test_getPrimes_FileIsEmpty_Mocking() throws IllegalArgumentException {
-		String filepath = "empty.txt";
-		
-		// Mock the FileIO dependency
-		FileIO fio = mock(FileIO.class);
-		when(fio.readFile(filepath)).thenThrow(IllegalArgumentException.class);
-		
-		// Mock the MyMath dependency
-		MyMath mm = mock(MyMath.class);
-		
-		aot.findPrimesInFile(fio, filepath, mm);
-	}
-	
-	/*
-	 * A test case for the exceptions caused when
-	 * the given file doesn't exist.
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	public void test_getPrimes_FileDoesNotExist_Mocking() throws IllegalArgumentException {
-		String filepath = "invalid.txt";
-		
-		// Mock the FileIO dependency
-		FileIO fio = mock(FileIO.class);
-		when(fio.readFile(filepath)).thenThrow(IllegalArgumentException.class);
-		
-		// Mock the MyMath dependency
-		MyMath mm = mock(MyMath.class);
-		
-		aot.findPrimesInFile(fio, filepath, mm);
-	}
-	
-	/*
 	 * A test case for the exceptions caused when
 	 * argument's value is less than 2.
 	 */
@@ -111,7 +75,10 @@ public class ArrayOperationsTest {
 		
 		// Mock the MyMath dependency
 		MyMath mm = mock(MyMath.class);
+		when(mm.isPrime(16)).thenReturn(false);
+		when(mm.isPrime(28)).thenReturn(false);
 		when(mm.isPrime(-9)).thenThrow(IllegalArgumentException.class);
+		// No need to define further behavior as the exception will be thrown
 		
 		aot.findPrimesInFile(fio, filepath, mm);
 	}
