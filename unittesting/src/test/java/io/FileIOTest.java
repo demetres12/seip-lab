@@ -49,7 +49,8 @@ public class FileIOTest {
 	public void test_readFile_DoesNotExist_RuleException() throws IllegalArgumentException {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Input file does not exist");
-		fio.readFile("invalid.txt");
+		String invalidInputFilePath = resourcesPath.concat("invalid.txt");
+		fio.readFile(invalidInputFilePath);
 	}
 	
 	/*
