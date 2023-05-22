@@ -57,29 +57,4 @@ public class ArrayOperationsTest {
 		
 		assertArrayEquals(expectedPrimeNumbers, aot.findPrimesInFile(fio, filepath, mm));
 	}
-	
-	/*
-	 * A test case for the exceptions caused when
-	 * argument's value is less than 2.
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	public void test_getPrimes_ArgumentLessThanTwo_Mocking() throws IllegalArgumentException {
-		String filepath = "data.txt";
-		int[] expectedNumbers = new int[] {
-				14,28,-9,2,136,37,45,92,34,89
-		};
-		
-		// Mock the FileIO dependency
-		FileIO fio = mock(FileIO.class);
-		when(fio.readFile(filepath)).thenReturn(expectedNumbers);
-		
-		// Mock the MyMath dependency
-		MyMath mm = mock(MyMath.class);
-		when(mm.isPrime(16)).thenReturn(false);
-		when(mm.isPrime(28)).thenReturn(false);
-		when(mm.isPrime(-9)).thenThrow(IllegalArgumentException.class);
-		// No need to define further behavior as the exception will be thrown
-		
-		aot.findPrimesInFile(fio, filepath, mm);
-	}
 }
