@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Declaring the parent's POM information -->
+  	<parent>
+    		<groupId>gr.aueb.dmst.dimitriskokkotas</groupId>
+    		<artifactId>seip2023_practical_assignments</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+  	</parent>
+  	
+  	<!-- Declaring the module's POM information -->
+  	<artifactId>unittesting</artifactId>
+  	<name>Unit Testing practice project</name>
+  	<description>
+		Unit Testing practice project challenges the functionality of multiple
+		operations performed by a given set of Java source files. Essentially, within
+		the test classes, individual units of code are isolated, in order to
+		verify that each and every one has the excpected behavior. Cases provided
+		are required to be separately testable. Exception test cases are taken into 
+		consideration as well normal functionality verification.		
+	</description>
+</project>
