@@ -31,6 +31,7 @@ jobs:
       run: mvn clean package jacoco:report
       
   integration-test:
+
     needs: build
     runs-on: ubuntu-latest
 
@@ -42,18 +43,15 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven # Cache dependencies
-    - name: Build sourcecodeanalyzer packages
+    - name: Build with Maven
       run: mvn clean package
-    - name: Execute sourcecodeanazyer module
-      run: java -jar ~/work/seip-lab/seip-lab/sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/test/resources/TestClass.java regex local ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/metrics_csv csv
+
+    - name: Execute module
+      run: java -jar ~/work/seip-lab/seip-lab/sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/test/resources/TestClass.java regex local ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/generatedMetrics csv
     - name: Compare outputs
       run: |
-        diff ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/metrics_csv.csv ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/expected.csv
-        DIFF_EXIT_CODE=$?
-        # If the exit code is non-zero, fail the action
-        if [ $DIFF_EXIT_CODE -ne 0 ]; then
-          echo "Differences found"
+        diff ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/generatedMetrics.csv ~/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/expectedMetrics.csv
+        DIFF_OUTPUT=$?
+        if [ $DIFF_OUTPUT -ne 0 ]; then
           exit 1
-        else
-          echo "No differences found."
         fi
