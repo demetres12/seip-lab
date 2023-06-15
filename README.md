@@ -119,13 +119,13 @@ In case you need to generate reports for the modules, just execute the following
 mvn clean package jacoco:report
 ```
 
-1. In the event we focus on the unittesting module, we need to change working directory, by:
+- In the event we focus on the unittesting module, we need to change working directory, by:
 
 ```bash
 cd unittesting/targe/site/jacoco
 ```
 
-2. In the event we focus on the sourcecodeanalyzer module, we need to change working directory, by:
+- In the event we focus on the sourcecodeanalyzer module, we need to change working directory, by:
 
 ```bash
 cd sourcecodeanalyzer/targe/site/jacoco
