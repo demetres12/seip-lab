@@ -8,8 +8,9 @@
 1. [Introduction](#introduction)
 2. [Maven Assignment](#maven)
 3. [Unit Testing Assignment](#unittesting)
-4. [Continuous Integration](#ci)
-5. [Code Coverage](#codecov)
+4. [Design Patterns Assignment](#sourcecodeanalyzer)
+5. [Continuous Integration](#ci)
+6. [Code Coverage](#codecov)
 
 
 ## Introduction <a name="introduction"></a>
@@ -98,9 +99,9 @@ Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that
 
 Regarding the unit testing practice project there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md) file, that approaches the module in a practical and descriptive way.
 
-## Unit Testing Assignment <a name="unittesting"></a>
+## Design Patterns Assignment <a name="sourcecodeanalyzer"></a>
 
-Regarding the design patterns practice project (i.e. sourcecodeanalyzer) there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/sourcecodeanalyzer/README.md) file, that approaches the module in a practical and descriptive way.
+Regarding the design patterns practice project (i.e. `sourcecodeanalyzer`) there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/sourcecodeanalyzer/README.md) file, that approaches the module in a practical and descriptive way.
 
 ## Continuous Integration <a name="ci"></a>
 
