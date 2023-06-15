@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Execute module
-      run: java -jar ./sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./sourcecodeanalyzer/src/test/resources/TestClass.java regex local ./sourcecodeanalyzer/src/main/resources/metrics_csv csv
+      run: java -jar /sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar /sourcecodeanalyzer/src/test/resources/TestClass.java regex local /sourcecodeanalyzer/src/main/resources/metrics_csv csv
 
     - name: Compare outputs
-      run: diff ./sourcecodeanalyzer/src/main/resources/metrics_csv ./sourcecodeanalyzer/src/main/resources/expected.csv
+      run: diff /sourcecodeanalyzer/src/main/resources/metrics_csv /sourcecodeanalyzer/src/main/resources/expected.csv
