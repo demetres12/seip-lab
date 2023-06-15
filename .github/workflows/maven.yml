@@ -31,17 +31,13 @@ jobs:
       run: mvn clean package jacoco:report
       
   integration-test:
-
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - needs: build
-
     - name: printHome
       run: echo $HOME
-      
     - name: Execute module
       run: java -jar /home/runner/work/seip-lab/seip-lab/sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar /home/runner/work/seip-lab/seip-lab/sourcecodeanalyzer/src/test/resources/TestClass.java regex local /sourcecodeanalyzer/src/main/resources/metrics_csv csv
-
     - name: Compare outputs
       run: diff /home/runner/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/metrics_csv.csv /home/runner/work/seip-lab/seip-lab/sourcecodeanalyzer/src/main/resources/expected.csv
