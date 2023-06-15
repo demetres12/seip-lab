@@ -12,7 +12,15 @@
 	
 	<artifactId>sourcecodeanalyzer</artifactId>
 	<name>Design Patterns assignment's code base</name>
-	<description>This module contains the code base that will serve as the starting point for the design pattern assignment</description>
+	<description>
+		Design Patterns project serves as hands-on practice within the context
+		of software design knowledge area. Design principles application and design
+		patterns implementation are being done in order to redesign an existing poor
+		system that needs major refactoring. Essentially, identifying several principles
+		violation (e.g.,SOLID), we embody creational, structural and behavioral
+		patterns. Following the aforementioned reconstruction approach we gain
+		code reusability, maintanability, scalability etc.
+	</description>
 
 	<build>
 		<plugins>
