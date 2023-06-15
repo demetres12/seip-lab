@@ -98,6 +98,10 @@ Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that
 
 Regarding the unit testing practice project there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md) file, that approaches the module in a practical and descriptive way.
 
+## Unit Testing Assignment <a name="unittesting"></a>
+
+Regarding the design patterns practice project (i.e. sourcecodeanalyzer) there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/sourcecodeanalyzer/README.md) file, that approaches the module in a practical and descriptive way.
+
 ## Continuous Integration <a name="ci"></a>
 
 The current project utilizes Github Actions for the purpose of continuous integration. You may take a look
@@ -115,15 +119,25 @@ In case you need to generate reports for the modules, just execute the following
 mvn clean package jacoco:report
 ```
 
-In the event we focus on the unittesting module, we need to change working directory, by:
+1. In the event we focus on the unittesting module, we need to change working directory, by:
 
 ```bash
 cd unittesting/targe/site/jacoco
+```
+
+2. In the event we focus on the sourcecodeanalyzer module, we need to change working directory, by:
+
+```bash
+cd sourcecodeanalyzer/targe/site/jacoco
 ```
 
 Eventually, the `jacoco` dir holds the generated reports in several formats (e.g., HTML,XML). Subsequently, `index.html` file provides the core information
 regarding code coverage by lines, branches, methods etc.
 
 <h1 align="center">
-	<img height="171"  width="800" src="media/code-coverage.png" alt="">
+	<img height="171"  width="800" src="media/unittesting-code-coverage.png" alt="">
+</h1>
+
+<h1 align="center">
+	<img height="171"  width="800" src="media/sourcecodeanalyzer-code-coverage.png" alt="">
 </h1>
