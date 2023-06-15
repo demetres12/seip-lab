@@ -61,3 +61,13 @@ build/
 # Seip Lab output (bin dir)
 
 seip2023_practical_assignments/
+
+# Intellij hidden directory (stores project-specific settings and configurations for the IntelliJ IDEA IDE)
+
+.idea/
+
+# Intellij files to be ignored
+
+*.iml
+
+
