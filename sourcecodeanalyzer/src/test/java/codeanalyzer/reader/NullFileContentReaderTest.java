@@ -13,14 +13,14 @@ public class NullFileContentReaderTest {
     private final FileContentReader fcr = new NullFileContentReader();
 
     @Test
-    public void testReadFileForRegex() throws IOException {
+    public void test_Read_File_For_Regex() throws IOException {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("Source code analysis process was aborted, as the provided source type is invalid.");
         fcr.readFileContentIntoString("any-filepath");
     }
 
     @Test
-    public void testReadFileForStrComp() throws IOException {
+    public void test_Read_File_For_StrComp() throws IOException {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("Source code analysis process was aborted, as the provided source type is invalid.");
         fcr.readFileContentIntoList("any-filepath");

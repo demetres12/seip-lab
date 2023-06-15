@@ -10,7 +10,7 @@ import static org.junit.Assert.assertSame;
 public class AnalysisTypeTest {
 
     @Test
-    public void testSetContentReader() {
+    public void test_Set_Content_Reader() {
         AnalysisType analysisType = new StringCompAnalysisType(); // any analyzer can be used
          FileContentReader expectedReader = new LocalFileContentReader(); // any reader can be used
 
