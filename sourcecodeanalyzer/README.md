@@ -248,25 +248,25 @@ Strategy design pattern lets us dynamically select a family of algorithms, inclu
 
 Strategy design pattern is majorly used within our project. Specifically, is utilized by our three modules: `reader`, `calculator`, `exporter`, and operates as an intermediate layer of abstraction between the concrete classes (e.g., `CSVFormatter`) and the factory classes (e.g., `MetricsExportFormatterFactory`). Examining each module, the following interfaces/abstract classes mirror the Strategy implementation:
 
--  `reader` module:
+- `reader` module:
   - The `FileContentReader` interface serves as an abstraction layer that defines the operations performed by:
     - `LocalFileContentReader`
-	- `WebFileContentReader`
-	- `NullFileContentReader`
+    - `WebFileContentReader`
+    - `NullFileContentReader`
 
 
--  `calculator` module:
+- `calculator` module:
   - The `AnalysisType` abstract class serves as an abstraction layer that defines the operations performed by:
     - `RegexAnalysisType`
-	- `StringCompAnalysisType`
-	- `NullAnalysisType`
+    - `StringCompAnalysisType`
+    - `NullAnalysisType`
 
 
--  `exporter` module:
+- `exporter` module:
   - The `MetricsExportFormatter` interface serves as an abstraction layer that defines the operations performed by:
     - `CSVFormatter`
-	- `JSONFormatter`
-	- `NullFormatter`
+    - `JSONFormatter`
+    - `NullFormatter`
 
 #### How does it affect our system?
 
@@ -341,7 +341,7 @@ NullObject seems to be a suitable and beneficial behavioral construction approac
 - Another proposal one could consider in terms of further abstraction concept, is visualized below:
 
 <h1 align="center">
-	<img height="400"  width="600" src="../media/another-proposed-solution.png" alt="">
+	<img height="400"  width="700" src="../media/another-proposed-solution.png" alt="">
 </h1>
 
 Essentially, we create a new abstraction layer for Metrics, that:
