@@ -20,6 +20,8 @@ assignments for the needs of Software Engineering in Practice course.
 Build automation tools, unit testing and design patterns, are some key 
 demonstrative topics that will be covered through the practical assignments.
 
+---
+
 ## Maven Assignment <a name="maven"></a>
 
 Getting started with the Maven build automation tool, we structure a parent-module project.
@@ -95,13 +97,19 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 ```
 Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that we use the `maven-assembly-plugin`, in order to package dependencies into the main .jar output file.
 
+---
+
 ## Unit Testing Assignment <a name="unittesting"></a>
 
 Regarding the unit testing practice project there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md) file, that approaches the module in a practical and descriptive way.
 
+---
+
 ## Design Patterns Assignment <a name="sourcecodeanalyzer"></a>
 
 Regarding the design patterns practice project (i.e. `sourcecodeanalyzer`) there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/sourcecodeanalyzer/README.md) file, that approaches the module in a practical and descriptive way.
+
+---
 
 ## Continuous Integration <a name="ci"></a>
 
@@ -109,6 +117,8 @@ The current project utilizes Github Actions for the purpose of continuous integr
 at the [workflow file](https://github.com/demetres12/seip-lab/blob/development-2/.github/workflows/maven.yml), where as declared, Github Actions CI services test and build the application upon each `push` and `pull-request`.
 
 After each build, the badge is updated with the corresponding build status, green for passes and red for failures.
+
+---
 
 ## Code Coverage <a name="codecov"></a>
 
