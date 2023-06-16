@@ -340,9 +340,7 @@ NullObject seems to be a suitable and beneficial behavioral construction approac
 
 - Another proposal one could consider in terms of further abstraction concept, is visualized below:
 
-<h1 align="center">
-	<img height="400"  width="700" src="../media/another-proposed-solution.png" alt="">
-</h1>
+![Metrics](../media/another-proposed-solution.png)
 
 Essentially, we create a new abstraction layer for Metrics, that:
 
