@@ -357,9 +357,9 @@ However, this could add more unwanted complexity to our system and the further e
 
 2. Moreover, there is a detailed and explanatory overview on Unit Testing located in the unittesting's module [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md).
 
-Executing the module requires the following steps:
+3. Executing the module requires the following steps:
 
-1. Build the executable Java application with:
+- Build the executable Java application with:
 
 ```bash 
 	# clean --> It comes in handy when we need to clean the previous build
@@ -367,7 +367,7 @@ Executing the module requires the following steps:
 	mvn clean package jacoco:report
 ```
 
-2. Run the executable by:
+- Run the executable by:
 
 ```bash 
 	java -jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
