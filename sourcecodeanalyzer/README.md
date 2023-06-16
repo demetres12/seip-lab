@@ -11,7 +11,7 @@
 - [Behavioral Design Patterns](#behavioral)
   - [Strategy](#strategy)
   - [Null Object](#nullobject)
-6. [Step by Step](#stepbystep)
+- [Step by Step](#stepbystep)
 
 
 ## Introduction <a name="introduction"></a>
@@ -106,14 +106,14 @@ Simple Factory is implemented within our project through:
     - `WebFileContentReader`
     - `NullFileContentReader`
 
--  `calculator` module with:
+- `calculator` module with:
   - The `AnalysisTypeFactory` class to be responsible for creating instances of the `AnalysisType` abstract class based on the provided analysis type.
   - The factory method `createAnalysisType` takes an `analysisType` parameter as an input and returns an instance of the corresponding concrete products, that being:
     - `RegexAnalysisType`
     - `StringCompAnalysisType`
     - `NullAnalysisType`
 
--  `exporter` module with:
+- `exporter` module with:
   - The `MetricsExportFormatterFactory` class to be responsible for creating instances of the `MetricsExportFormatter` interface based on the provided output type.
   - The factory method `createExportFormatter` takes an `outputType` parameter as an input and returns an instance of the corresponding concrete products, that being:
     - `CSVFormatter`
@@ -341,7 +341,7 @@ NullObject seems to be a suitable and beneficial behavioral construction approac
 - Another proposal one could consider in terms of further abstraction concept, is visualized below:
 
 <h1 align="center">
-	<img height="350"  width="750" src="../media/another-proposed-solution.png" alt="">
+	<img height="400"  width="600" src="../media/another-proposed-solution.png" alt="">
 </h1>
 
 Essentially, we create a new abstraction layer for Metrics, that:
@@ -390,12 +390,8 @@ Example given:
 ```bash
 	# Be aware that your working directory must be the one including the pox.xml configuration file
 	java -jar ./target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/test/resources/TestClass.java regex local generated_metrics csv
-```
-
-If everything is set properly you should receive a CLI message:
-
-```
-Metrics saved in <location>
-
+	
+	# If everything is set properly you should receive a CLI message:
+	# Metrics saved in <location>
 ```
 
