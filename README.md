@@ -8,8 +8,9 @@
 1. [Introduction](#introduction)
 2. [Maven Assignment](#maven)
 3. [Unit Testing Assignment](#unittesting)
-4. [Continuous Integration](#ci)
-5. [Code Coverage](#codecov)
+4. [Design Patterns Assignment](#sourcecodeanalyzer)
+5. [Continuous Integration](#ci)
+6. [Code Coverage](#codecov)
 
 
 ## Introduction <a name="introduction"></a>
@@ -18,6 +19,8 @@ The main purpose of the current repository is the submission of the lab
 assignments for the needs of Software Engineering in Practice course. 
 Build automation tools, unit testing and design patterns, are some key 
 demonstrative topics that will be covered through the practical assignments.
+
+---
 
 ## Maven Assignment <a name="maven"></a>
 
@@ -94,9 +97,19 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 ```
 Notice that the `jar-with-dependencies.jar` is the executable. Keep in mind that we use the `maven-assembly-plugin`, in order to package dependencies into the main .jar output file.
 
+---
+
 ## Unit Testing Assignment <a name="unittesting"></a>
 
 Regarding the unit testing practice project there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/unittesting/README.md) file, that approaches the module in a practical and descriptive way.
+
+---
+
+## Design Patterns Assignment <a name="sourcecodeanalyzer"></a>
+
+Regarding the design patterns practice project (i.e. `sourcecodeanalyzer`) there is an individual [README](https://github.com/demetres12/seip-lab/blob/development-2/sourcecodeanalyzer/README.md) file, that approaches the module in a practical and descriptive way.
+
+---
 
 ## Continuous Integration <a name="ci"></a>
 
@@ -104,6 +117,8 @@ The current project utilizes Github Actions for the purpose of continuous integr
 at the [workflow file](https://github.com/demetres12/seip-lab/blob/development-2/.github/workflows/maven.yml), where as declared, Github Actions CI services test and build the application upon each `push` and `pull-request`.
 
 After each build, the badge is updated with the corresponding build status, green for passes and red for failures.
+
+---
 
 ## Code Coverage <a name="codecov"></a>
 
@@ -115,15 +130,25 @@ In case you need to generate reports for the modules, just execute the following
 mvn clean package jacoco:report
 ```
 
-In the event we focus on the unittesting module, we need to change working directory, by:
+- In the event we focus on the unittesting module, we need to change working directory, by:
 
 ```bash
 cd unittesting/targe/site/jacoco
+```
+
+- In the event we focus on the sourcecodeanalyzer module, we need to change working directory, by:
+
+```bash
+cd sourcecodeanalyzer/targe/site/jacoco
 ```
 
 Eventually, the `jacoco` dir holds the generated reports in several formats (e.g., HTML,XML). Subsequently, `index.html` file provides the core information
 regarding code coverage by lines, branches, methods etc.
 
 <h1 align="center">
-	<img height="171"  width="800" src="media/code-coverage.png" alt="">
+	<img height="171"  width="800" src="media/unittesting-code-coverage.png" alt="">
+</h1>
+
+<h1 align="center">
+	<img height="171"  width="800" src="media/sourcecodeanalyzer-code-coverage.png" alt="">
 </h1>
